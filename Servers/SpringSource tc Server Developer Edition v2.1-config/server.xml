@@ -13,7 +13,7 @@
         <Executor maxThreads="300" minSpareThreads="50" name="tomcatThreadPool" namePrefix="tomcat-http--"/>
         <Engine defaultHost="localhost" name="Catalina">
             <Realm className="org.apache.catalina.realm.UserDatabaseRealm" resourceName="UserDatabase"/>
-            <Host appBase="webapps" autoDeploy="true" deployOnStartup="true" deployXML="true" name="localhost" unpackWARs="true" xmlNamespaceAware="false" xmlValidation="false"/>
+            <Host appBase="webapps" autoDeploy="true" deployOnStartup="true" deployXML="true" name="localhost" unpackWARs="true" xmlNamespaceAware="false" xmlValidation="false"><Context docBase="SAMPLE" path="/SAMPLE" reloadable="true" source="org.eclipse.jst.jee.server:SAMPLE"/></Host>
             <Valve className="com.springsource.insight.collection.tcserver.request.HttpRequestOperationCollectionValve"/>
         </Engine>
         <Connector acceptCount="100" connectionTimeout="20000" executor="tomcatThreadPool" maxKeepAliveRequests="15" port="${bio.http.port}" protocol="org.apache.coyote.http11.Http11Protocol" redirectPort="${bio.https.port}"/>

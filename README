@@ -4,4 +4,8 @@ change!
 
 3rd Commit
 
+<<<<<<< HEAD
 Master: change
+=======
+test
+>>>>>>> experiment
